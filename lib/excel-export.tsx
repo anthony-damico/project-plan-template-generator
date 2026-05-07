@@ -488,7 +488,7 @@ export async function exportToExcel(
           const statusData = dbStatusData[milestone.name]
 
           row.getCell(1).value = milestone.name
-          
+
           const statusCell = row.getCell(2)
           statusCell.value = statusData?.status || milestone.status
           statusCell.dataValidation = {
@@ -496,16 +496,17 @@ export async function exportToExcel(
             allowBlank: false,
             formulae: ['"Not started,In progress,Complete,On Hold"'],
           }
-          
+
           row.getCell(3).value = milestone.durationWeeks
 
           const plannedStartCell = row.getCell(4)
-          // First milestone of deliverable references previous deliverable's last milestone end date
-          // Subsequent milestones reference previous milestone's end date + 1 working day
+          // In parallel mode all deliverables start from the connection milestone end date.
+          // In sequential mode each deliverable chains from the previous deliverable's end row.
+          const startReferenceRow = config.executionMode === "parallel" ? connectionRow : lastDeliverableEndRow
           if (milestoneIndex === 0) {
-            // First milestone - reference previous deliverable's end date (column E)
+            // First milestone - reference connection end (parallel) or previous deliverable end (sequential)
             plannedStartCell.value = {
-              formula: `WORKDAY(E${lastDeliverableEndRow},1)`,
+              formula: `WORKDAY(E${startReferenceRow},1)`,
             }
           } else {
             // Subsequent milestones - reference previous row's end date + 1 working day
@@ -686,7 +687,7 @@ export async function exportToExcel(
           const statusData = productStatusData[milestone.name]
 
           row.getCell(1).value = milestone.name
-          
+
           const statusCell = row.getCell(2)
           statusCell.value = statusData?.status || milestone.status
           statusCell.dataValidation = {
@@ -694,16 +695,17 @@ export async function exportToExcel(
             allowBlank: false,
             formulae: ['"Not started,In progress,Complete,On Hold"'],
           }
-          
+
           row.getCell(3).value = milestone.durationWeeks
 
           const plannedStartCell = row.getCell(4)
-          // First milestone of deliverable references previous deliverable's last milestone end date
-          // Subsequent milestones reference previous milestone's end date + 1 working day
+          // In parallel mode all deliverables start from the connection milestone end date.
+          // In sequential mode each deliverable chains from the previous deliverable's end row.
+          const startReferenceRow = config.executionMode === "parallel" ? connectionRow : lastDeliverableEndRow
           if (milestoneIndex === 0) {
-            // First milestone - reference previous deliverable's end date (column E)
+            // First milestone - reference connection end (parallel) or previous deliverable end (sequential)
             plannedStartCell.value = {
-              formula: `WORKDAY(E${lastDeliverableEndRow},1)`,
+              formula: `WORKDAY(E${startReferenceRow},1)`,
             }
           } else {
             // Subsequent milestones - reference previous row's end date + 1 working day
