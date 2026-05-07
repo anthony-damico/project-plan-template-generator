@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel Formatting Preview - Combinations</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px;
+      background: #f5f5f5;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      color: #666;
+      margin-bottom: 40px;
+    }
+    
+    .option {
+      background: white;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 32px;
+    }
+    
+    .option h2 {
+      margin-top: 0;
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    
+    .option .description {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    
+    th {
+      background: #4472C4;
+      color: white;
+      font-weight: 600;
+    }
+    
+    /* Soft Colors with Colored Text */
+    .soft-green {
+      background-color: #D4EDDA;
+      color: #155724;
+      font-weight: 500;
+    }
+    
+    .soft-yellow {
+      background-color: #FFF3CD;
+      color: #856404;
+      font-weight: 500;
+    }
+    
+    .soft-red {
+      background-color: #F8D7DA;
+      color: #721C24;
+      font-weight: 500;
+    }
+    
+    /* Left Border Accent */
+    .border-green {
+      border-left: 5px solid #28A745;
+      background: white;
+      color: #333;
+    }
+    
+    .border-yellow {
+      border-left: 5px solid #FFC107;
+      background: white;
+      color: #333;
+    }
+    
+    .border-red {
+      border-left: 5px solid #DC3545;
+      background: white;
+      color: #333;
+    }
+    
+    /* Thick Border for emphasis */
+    .border-thick-green {
+      border-left: 7px solid #28A745;
+      background: white;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .border-thick-yellow {
+      border-left: 7px solid #FFC107;
+      background: white;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .border-thick-red {
+      border-left: 7px solid #DC3545;
+      background: white;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    /* Saturated soft colors */
+    .soft-saturated-green {
+      background-color: #C3E6CB;
+      color: #155724;
+      font-weight: 600;
+    }
+    
+    .soft-saturated-yellow {
+      background-color: #FFEAA7;
+      color: #856404;
+      font-weight: 600;
+    }
+    
+    .soft-saturated-red {
+      background-color: #F5C6CB;
+      color: #721C24;
+      font-weight: 600;
+    }
+    
+    .note {
+      background: #E3F2FD;
+      padding: 16px;
+      border-radius: 6px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #1565C0;
+    }
+    
+    .recommended {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Excel Variance Formatting - Combination Options</h1>
+  <p class="subtitle">Compare different combinations of formatting styles for your variance columns</p>
+  
+  <!-- Combination A: User's suggestion -->
+  <div class="option">
+    <h2>Combination A: Border for Start/End + Soft Colors for Milestone <span class="recommended">YOUR IDEA</span></h2>
+    <p class="description">Left border accent for Start/End Variance (subtle), soft colors for Milestone Variance (emphasis)</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Milestone</th>
+          <th>Start Variance</th>
+          <th>End Variance</th>
+          <th>Milestone Variance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Get data</td>
+          <td class="border-green">-2</td>
+          <td class="border-green">-2</td>
+          <td class="soft-green">-2</td>
+        </tr>
+        <tr>
+          <td>Build database</td>
+          <td class="border-green">-2</td>
+          <td class="border-green">0</td>
+          <td class="soft-yellow">2</td>
+        </tr>
+        <tr>
+          <td>Validation</td>
+          <td class="border-yellow">2</td>
+          <td class="border-green">-2</td>
+          <td class="soft-green">-4</td>
+        </tr>
+        <tr>
+          <td>Training</td>
+          <td class="border-green">-2</td>
+          <td class="border-yellow">5</td>
+          <td class="soft-red">7</td>
+        </tr>
+        <tr>
+          <td>Training feedback</td>
+          <td class="border-yellow">5</td>
+          <td class="border-yellow">5</td>
+          <td class="soft-green">0</td>
+        </tr>
+        <tr>
+          <td>Sign-off</td>
+          <td class="border-red">8</td>
+          <td class="border-red">10</td>
+          <td class="soft-yellow">2</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">
+      <strong>Best for:</strong> When you want Milestone Variance to stand out as the key metric while keeping Start/End subtle<br>
+      <strong>Visual hierarchy:</strong> Milestone Variance draws the eye first, Start/End provide supporting context
+    </div>
+  </div>
+  
+  <!-- Combination B: Reverse -->
+  <div class="option">
+    <h2>Combination B: Soft Colors for Start/End + Border for Milestone</h2>
+    <p class="description">Soft colors for Start/End Variance (context), left border for Milestone Variance (clean emphasis)</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Milestone</th>
+          <th>Start Variance</th>
+          <th>End Variance</th>
+          <th>Milestone Variance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Get data</td>
+          <td class="soft-green">-2</td>
+          <td class="soft-green">-2</td>
+          <td class="border-green">-2</td>
+        </tr>
+        <tr>
+          <td>Build database</td>
+          <td class="soft-green">-2</td>
+          <td class="soft-green">0</td>
+          <td class="border-yellow">2</td>
+        </tr>
+        <tr>
+          <td>Validation</td>
+          <td class="soft-yellow">2</td>
+          <td class="soft-green">-2</td>
+          <td class="border-green">-4</td>
+        </tr>
+        <tr>
+          <td>Training</td>
+          <td class="soft-green">-2</td>
+          <td class="soft-yellow">5</td>
+          <td class="border-red">7</td>
+        </tr>
+        <tr>
+          <td>Training feedback</td>
+          <td class="soft-yellow">5</td>
+          <td class="soft-yellow">5</td>
+          <td class="border-green">0</td>
+        </tr>
+        <tr>
+          <td>Sign-off</td>
+          <td class="soft-red">8</td>
+          <td class="soft-red">10</td>
+          <td class="border-yellow">2</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">
+      <strong>Best for:</strong> When you want Start/End to be easily scannable while Milestone stays clean and modern<br>
+      <strong>Visual hierarchy:</strong> Balanced emphasis, Milestone Variance is distinct but not overwhelming
+    </div>
+  </div>
+  
+  <!-- Combination C: All borders with thickness variation -->
+  <div class="option">
+    <h2>Combination C: Unified Border Style with Emphasis</h2>
+    <p class="description">All columns use left border, but Milestone Variance has thicker border for emphasis</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Milestone</th>
+          <th>Start Variance</th>
+          <th>End Variance</th>
+          <th>Milestone Variance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Get data</td>
+          <td class="border-green">-2</td>
+          <td class="border-green">-2</td>
+          <td class="border-thick-green">-2</td>
+        </tr>
+        <tr>
+          <td>Build database</td>
+          <td class="border-green">-2</td>
+          <td class="border-green">0</td>
+          <td class="border-thick-yellow">2</td>
+        </tr>
+        <tr>
+          <td>Validation</td>
+          <td class="border-yellow">2</td>
+          <td class="border-green">-2</td>
+          <td class="border-thick-green">-4</td>
+        </tr>
+        <tr>
+          <td>Training</td>
+          <td class="border-green">-2</td>
+          <td class="border-yellow">5</td>
+          <td class="border-thick-red">7</td>
+        </tr>
+        <tr>
+          <td>Training feedback</td>
+          <td class="border-yellow">5</td>
+          <td class="border-yellow">5</td>
+          <td class="border-thick-green">0</td>
+        </tr>
+        <tr>
+          <td>Sign-off</td>
+          <td class="border-red">8</td>
+          <td class="border-red">10</td>
+          <td class="border-thick-yellow">2</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">
+      <strong>Best for:</strong> Consistent, modern look with subtle hierarchy through border thickness<br>
+      <strong>Visual hierarchy:</strong> Very clean, professional, all columns feel cohesive
+    </div>
+  </div>
+  
+  <!-- Combination D: All soft colors with saturation variation -->
+  <div class="option">
+    <h2>Combination D: Unified Soft Colors with Saturation</h2>
+    <p class="description">All columns use soft colors, but Milestone Variance has more saturated colors and bold text</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Milestone</th>
+          <th>Start Variance</th>
+          <th>End Variance</th>
+          <th>Milestone Variance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Get data</td>
+          <td class="soft-green">-2</td>
+          <td class="soft-green">-2</td>
+          <td class="soft-saturated-green">-2</td>
+        </tr>
+        <tr>
+          <td>Build database</td>
+          <td class="soft-green">-2</td>
+          <td class="soft-green">0</td>
+          <td class="soft-saturated-yellow">2</td>
+        </tr>
+        <tr>
+          <td>Validation</td>
+          <td class="soft-yellow">2</td>
+          <td class="soft-green">-2</td>
+          <td class="soft-saturated-green">-4</td>
+        </tr>
+        <tr>
+          <td>Training</td>
+          <td class="soft-green">-2</td>
+          <td class="soft-yellow">5</td>
+          <td class="soft-saturated-red">7</td>
+        </tr>
+        <tr>
+          <td>Training feedback</td>
+          <td class="soft-yellow">5</td>
+          <td class="soft-yellow">5</td>
+          <td class="soft-saturated-green">0</td>
+        </tr>
+        <tr>
+          <td>Sign-off</td>
+          <td class="soft-red">8</td>
+          <td class="soft-red">10</td>
+          <td class="soft-saturated-yellow">2</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">
+      <strong>Best for:</strong> Traditional Excel look with clear emphasis on the most important metric<br>
+      <strong>Visual hierarchy:</strong> Milestone Variance pops out, familiar to Excel users
+    </div>
+  </div>
+  
+  <div style="background: white; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0;">Color Legend</h3>
+    <ul style="line-height: 1.8;">
+      <li><strong>Green:</strong> On time or early (variance ≤ 0 days)</li>
+      <li><strong>Yellow:</strong> Slightly late (1-5 working days)</li>
+      <li><strong>Red:</strong> Significantly late (more than 5 working days)</li>
+    </ul>
+    <p style="margin-top: 16px; color: #666; font-size: 14px;">
+      <strong>Tip:</strong> Combination A (your idea) provides excellent visual hierarchy - the border style keeps Start/End variance subtle while the soft colors make Milestone Variance (the key metric) immediately noticeable.
+    </p>
+  </div>
+</body>
+</html>
